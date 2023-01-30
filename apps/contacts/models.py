@@ -7,7 +7,8 @@ class Contact(models.Model):
     last_name = models.CharField(max_length=200, blank=False, null=False)
     email = models.EmailField(blank=False, null=False, unique=True)
     #phone_number = PhoneNumberField(blank=True)
-    phone_number = models.CharField(max_length=15, blank=True)
+    #phone_number = PhoneNumberField()
+    phone_number = models.CharField(max_length=15, blank=True)     
     #meetings = models.ForeignKey(Meeting, on_delete=models.RESTRICT)
     
     def __str__(self):
