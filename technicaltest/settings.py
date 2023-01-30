@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-c=sf96&#t2j(xnd+xk$^a16o_a-ks$#r5+2+!--$+^e$9c(vot
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -38,8 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    #'phonenumber_field', #error
+    #python-phonenumbers #TODO:  try
     'apps.contacts',
-    'apps.meetings'
+    'apps.meetings',    
 ]
 
 MIDDLEWARE = [
