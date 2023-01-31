@@ -15,17 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-#from apps.meetings.views import meetings_list
-#from apps.contacts.views import contacts_list
 from apps.meetings import urls as meetings_urls
 from apps.contacts import urls as contacts_urls
 
 urlpatterns = [
     path('drf/', include('rest_framework.urls')),
-    path('admin/', admin.site.urls),
-    #path('meetings_list.html', meetings_list),
-    #path('contacts_list.html', contacts_list),
-    
-    path('contacts', include(contacts_urls)),
-    path('meetings', include(meetings_urls))
+    path('admin/', admin.site.urls),       
+    path('contacts/', include(contacts_urls)),
+    path('meetings/', include(meetings_urls))
 ]
