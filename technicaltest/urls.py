@@ -21,6 +21,6 @@ from apps.contacts import urls as contacts_urls
 urlpatterns = [
     path('drf/', include('rest_framework.urls')),
     path('admin/', admin.site.urls),       
-    path('contacts/', include(contacts_urls)),
-    path('meetings/', include(meetings_urls))
+    path('contacts/', include(contacts_urls)),    
+    path('meetings/', include(meetings_urls))   
 ]

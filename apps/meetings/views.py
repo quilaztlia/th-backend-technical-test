@@ -1,9 +1,6 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status, permissions
-
-#from django.shortcuts import render
-#from django.http import HttpResponse
 from apps.meetings.models import Meeting
 from apps.meetings.serializers import MeetingSerializer
 
@@ -22,10 +19,9 @@ class MeetingListApiView(APIView):
 
     # 2. Create
     def post(self, request, *args, **kwargs):        
-        data = {
-            'task': request.data.get('task'), 
-            'completed': request.data.get('completed'), 
-            #'user': request.user.id,
+        data = {            
+            #'id': request.data.get('id'), 
+            #'author': request.user.id,
             'author': request.data.get('author'), 
             'title': request.data.get('title'), 
             'description': request.data.get('description'), 

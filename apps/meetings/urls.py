@@ -11,4 +11,5 @@ from . import views
 urlpatterns = [
    #path('', views.meetings_list, name='meetings_list.html'),
    path('api', MeetingListApiView.as_view()),
+   #path('meetings/<uuid:pk>', include(meetings_urls))
 ]
