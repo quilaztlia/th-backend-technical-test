@@ -9,4 +9,4 @@ class Contact(models.Model):
     phone_number = models.CharField(max_length=50, blank=True)     
     
     def __str__(self):
-        return f'{self.email} : {self.first_name} - {self.last_name}'
+        return f'{self.email} : {self.first_name} - {self.last_name}'      
