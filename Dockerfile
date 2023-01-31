@@ -12,15 +12,16 @@ RUN groupadd -g 10000 app && \
   chown app:app /app && \
   apt-get update && \
   apt install -y gcc libpq-dev git gettext make && \
-  pip install --upgrade pip
-
+  pip install --upgrade pip &&\
+  pip install 'django-phonenumber-field[phonenumberslite]' 
+  #pip3 install django-phonenumber-field[phonenumbers] 
 
 COPY requirements.txt /tmp/requirements.txt
-RUN pip install -r /tmp/requirements.txt
-
+RUN pip install -r /tmp/requirements.txt 
+    #pip install django-phonenumber-field[phonenumberslite]
 COPY . .
 
-RUN django-admin compilemessages
+RUN django-admin compilemessages 
 
 USER app
 
