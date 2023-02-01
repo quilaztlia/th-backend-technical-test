@@ -1,15 +1,7 @@
-#from django.conf.urls import url
 from django.urls import path
-#from django.urls import path, include
-from .views import (
-    MeetingListApiView,
-)
-
-
-from . import views
+from .views import MeetingListApiView, MeetingDetailApiView
 
 urlpatterns = [
-   #path('', views.meetings_list, name='meetings_list.html'),
    path('api', MeetingListApiView.as_view()),
-   #path('meetings/<uuid:pk>', include(meetings_urls))
+   path('api/<int:meeting_id>', MeetingDetailApiView.as_view())
 ]

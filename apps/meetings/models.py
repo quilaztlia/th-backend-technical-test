@@ -20,7 +20,6 @@ class Meeting(models.Model):
         (COMP, 'Completed'),
     ]
     
-    #id = models.UUIDField() #TODO:?
     title = models.CharField(max_length=200, blank=False, null=False, unique=True) 
     description = models.TextField(blank=True, null=False, default='') 
     datetime = models.DateTimeField(blank=False, null=False, default=timezone.now())
